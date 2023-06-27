@@ -7,13 +7,20 @@
     <title>Document</title>
   </head>
   <body>
+    <div id="titleContainer"><h2 id="title">Memory Game</h2></div>
+
     <div id="gameBox"></div>
+
+    <div id="scoreContainer">
+      <h6 id="score">Click the play button to start the game</h6>
+    </div>
+
     <div id="buttonsContainer">
       <div id="startButtonContianer">
-        <button onclick="Start()">Play</button>
+        <button id="startButton" onclick="start()">Play</button>
       </div>
       <div id="replayButtonContianer">
-        <button onclick="replay">Play Again</button>
+        <button id="replayButton" onclick="replay">Play Again</button>
       </div>
     </div>
 

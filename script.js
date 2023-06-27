@@ -15,11 +15,17 @@ shuffleArray(numberArray);
 console.log(numberArray);
 
 let gameBox = document.getElementById("gameBox");
+
 for (i = 0; i < numberArray.length; ++i) {
-  var div = document.createElement("div");
+  let div = document.createElement("div");
   div.innerText = numberArray[i];
   div.classList.add("gameCard");
   gameBox.appendChild(div);
 }
 
-let highScoresArray = [];
+/*const start = () => {
+  let div = document.getElementsByClassName("gameCard").classList;
+  div.remove("hidden");
+};
+
+let highScoresArray = [];*/
