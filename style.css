@@ -1,0 +1,25 @@
+body {
+  justify-content: center;
+  margin: auto;
+  padding: 0;
+}
+
+#gameBox {
+  background: yellow;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 500px;
+  width: 500px;
+  padding: 25px;
+  border: 2px solid black;
+}
+
+.gameCard {
+  flex: 1 0 20%;
+  background: red;
+  border: 1px solid black;
+  margin: auto 5px;
+  padding: 25px 5px;
+}

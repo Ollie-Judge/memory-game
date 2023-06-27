@@ -18,17 +18,8 @@ let gameBox = document.getElementById("gameBox");
 for (i = 0; i < numberArray.length; ++i) {
   var div = document.createElement("div");
   div.innerText = numberArray[i];
+  div.classList.add("gameCard");
   gameBox.appendChild(div);
 }
 
 let highScoresArray = [];
-
-/*
-forEach((number in randomNumber) => {
-  return `
-  <div>
-  ${randomNumber.map(number => `<div>${number}</div>`)}
-  </div>
-`;
-});*/
-// use map to take all items in an array and put them into divs
