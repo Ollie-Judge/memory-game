@@ -23,6 +23,10 @@ for (i = 0; i < numberArray.length; ++i) {
   gameBox.appendChild(div);
 }
 
+// compare 2 of the divs that the user has clicked
+// put each item into an array, then compare their value to evalute if they match
+// or store them in seperate variables then compare them
+
 /*const start = () => {
   let div = document.getElementsByClassName("gameCard").classList;
   div.remove("hidden");
