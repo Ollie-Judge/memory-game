@@ -53,11 +53,13 @@ body {
 }
 
 #startButtonContianer,
+#rulesButtonContianer,
 #replayButtonContianer {
   margin: auto;
 }
 
 #startButton,
+#rulesButton,
 #replayButton {
   padding: 10px 15px;
   border: 1px solid black;
