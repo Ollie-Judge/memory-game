@@ -16,20 +16,39 @@ const start = () => {
   let gameBox = document.getElementById("gameBox");
 
   for (i = 0; i < numberArray.length; ++i) {
-    let div = document.createElement("div");
+    const div = document.createElement("div");
     div.innerText = numberArray[i];
     div.classList.add("gameCard");
+    div.id = `${numberArray[i]}`;
     div.addEventListener("click", userClicked);
     gameBox.appendChild(div);
   }
 };
 
-const userClicked = () => {
-  console.log(document.getElementsByClassName("gameCard").innerHTML);
+let userPicked1;
+let userPicked2;
+
+let array = [];
+
+const userClicked = (e) => {
+  array.push(e.target.id);
+  console.log(array);
+
+  if (array.length === 2) {
+    checkUserSelection();
+  }
 };
 
-// compare 2 of the divs that the user has clicked
-// put each item into an array, then compare their value to evalute if they match
-// or store them in seperate variables then compare them
+console.log(userPicked1);
+console.log(userPicked2);
+
+const checkUserSelection = () => {
+  if (array[0] === array[1]) {
+    console.log("correct");
+  } else {
+    console.log("incorrect");
+  }
+  array = [];
+};
 
 let highScoresArray = [];
