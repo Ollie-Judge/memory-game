@@ -1,5 +1,8 @@
 const start = () => {
   document.getElementById("startButton").removeAttribute("onclick");
+  let scoreOutput = document.getElementById("scoreOutput");
+  score = 0;
+  scoreOutput.innerHTML = `Score: ${score}`;
 
   shuffleArray(numberArray);
   console.log(numberArray);
@@ -14,6 +17,7 @@ const start = () => {
     div.addEventListener("click", userClicked);
     gameBox.appendChild(div);
   }
+  correctGuesses = 0;
 };
 
 let numberArray = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6];
@@ -47,22 +51,22 @@ const checkUserSelection = () => {
     console.log("correct" + correctGuesses);
     document.getElementById(`${userChosenCards[0]}`).remove();
     document.getElementById(`${userChosenCards[1]}`).remove();
-    // remove the correct cards
     endGame();
   } else {
     score++;
-    console.log("incorrect " + score);
+    scoreOutput.innerHTML = `Score: ${score}`;
   }
   userChosenCards = [];
 };
 
-let highScoresArray = [];
+let lowestScoresArray = [];
 
 const endGame = () => {
   if (correctGuesses === 6) {
-    highScoresArray.push(score);
-    console.log("end game");
-    console.log(`${score} high scores`);
+    lowestScoresArray.push(score);
+    scoreOutput.innerHTML = `Your score for this round was: ${score}. Click "play again" if you wish to have another go`;
+    let lowestScoreTest = document.getElementById("lowestScoreOutput");
+    lowestScoreTest.innerHTML = `Lowest scores: ${lowestScoresArray.join(" ")}`;
     document.getElementById("replayButton").setAttribute("onclick", "start();");
   }
 };

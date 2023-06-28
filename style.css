@@ -34,7 +34,8 @@ body {
   padding: 25px 5px;
 }
 
-#score {
+#scoreOutput,
+#lowestScoreOutput {
   text-align: center;
 }
 
