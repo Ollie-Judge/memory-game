@@ -11,9 +11,14 @@
     padding: 25px;
     border: 2px solid black;
   }
+
+  #buttonsContainer {
+    margin: 15px auto 30px;
+    width: 80%;
+  }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1300px) {
   #gameBox {
     margin: auto;
     background: yellow;
@@ -21,10 +26,15 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    height: 500px;
-    width: 500px;
+    height: 350px;
+    width: 350px;
     padding: 25px;
     border: 2px solid black;
+  }
+
+  #buttonsContainer {
+    margin: 15px auto 30px;
+    width: 60%;
   }
 }
 @media (min-width: 2100px) {
@@ -35,9 +45,14 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    height: 500px;
-    width: 500px;
+    height: 375px;
+    width: 375px;
     padding: 25px;
     border: 2px solid black;
+  }
+
+  #buttonsContainer {
+    margin: 15px auto 30px;
+    width: 60%;
   }
 }
