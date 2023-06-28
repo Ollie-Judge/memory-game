@@ -32,6 +32,8 @@ body {
   border: 1px solid black;
   margin: auto 5px;
   padding: 25px 5px;
+  color: red;
+  user-select: none;
 }
 
 #scoreOutput,

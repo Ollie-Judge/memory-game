@@ -10,12 +10,12 @@ const start = () => {
   let gameBox = document.getElementById("gameBox");
 
   for (i = 0; i < numberArray.length; ++i) {
-    const div = document.createElement("div");
-    div.innerText = numberArray[i];
-    div.classList.add("gameCard");
-    div.id = `${numberArray[i]}`;
-    div.addEventListener("click", userClicked);
-    gameBox.appendChild(div);
+    const numberDiv = document.createElement("div");
+    numberDiv.innerText = numberArray[i];
+    numberDiv.classList.add("gameCard");
+    numberDiv.id = `${numberArray[i]}`;
+    numberDiv.addEventListener("click", userClicked);
+    gameBox.appendChild(numberDiv);
   }
   correctGuesses = 0;
 };
@@ -23,9 +23,9 @@ const start = () => {
 let numberArray = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6];
 
 const shuffleArray = (array) => {
-  for (var i = numberArray.length - 1; i > 0; i--) {
-    var j = Math.floor(Math.random() * (i + 1));
-    var temp = numberArray[i];
+  for (let i = numberArray.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    let temp = numberArray[i];
     array[i] = array[j];
     array[j] = temp;
   }
@@ -34,9 +34,13 @@ const shuffleArray = (array) => {
 let userChosenCards = [];
 
 const userClicked = (e) => {
+  e.target.style.color = "black";
+
+  setTimeout(() => {
+    e.target.style.color = "red";
+  }, "2000");
   userChosenCards.push(e.target.id);
   console.log(userChosenCards);
-
   if (userChosenCards.length === 2) {
     checkUserSelection();
   }
