@@ -38,7 +38,8 @@ const userClicked = (e) => {
 
   setTimeout(() => {
     e.target.style.color = "red";
-  }, "2000");
+    userChosenCards = [];
+  }, "3000");
   userChosenCards.push(e.target.id);
   console.log(userChosenCards);
   if (userChosenCards.length === 2) {
